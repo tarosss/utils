@@ -1,0 +1,11 @@
+FROM ubuntu
+
+VOLUME [ "/data" ]
+
+WORKDIR /data
+
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+CMD ["tail", "-f", "/dev/null"]

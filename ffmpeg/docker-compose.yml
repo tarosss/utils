@@ -1,0 +1,13 @@
+version: '3.8'  # Docker Compose のバージョンを指定
+
+services:
+  app:
+    build:
+      context: .  # Dockerfile が存在するディレクトリを指定
+      dockerfile: dockerfile  # 使用する Dockerfile を指定（省略可能）
+    container_name: ubuntu-ffmpeg  # コンテナ名
+    command: /bin/bash  # コンテナ実行時に実行するコマンド
+    volumes:
+      - ./data:/data  # ホストの ./data をコンテナの /data にマウント
+    stdin_open: true  # コンテナをインタラクティブに使用する設定
+    tty: true         # TTY を有効化
