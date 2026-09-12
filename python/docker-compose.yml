@@ -1,7 +1,10 @@
 services:
-  python: 
-    image: python:3
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: python
     volumes:
       - ./source:/home
+    working_dir: /home
     command: tail -f /dev/null
