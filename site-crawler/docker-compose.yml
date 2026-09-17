@@ -1,0 +1,18 @@
+services:
+  crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: site-crawler
+
+    volumes:
+      - ./src:/app/src
+      - ./screenshots:/app/screenshots
+      - ./downloads:/app/downloads
+
+    working_dir: /app
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    shm_size: "2gb"
