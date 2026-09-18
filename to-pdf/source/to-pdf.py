@@ -6,7 +6,7 @@ folder = "image"
 output_pdf = "output.pdf"
 
 # フォルダ内のファイルを取得し、拡張子でフィルタ
-files = sorted([f for f in os.listdir(folder) if f.lower().endswith((".jpg", ".jpeg", ".png"))])
+files = sorted([f for f in os.listdir(folder) if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp"))])
 
 # 最初の画像を開いてPDF化開始
 image_list = []

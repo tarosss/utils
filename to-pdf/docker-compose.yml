@@ -1,9 +1,9 @@
 services:
-  python:
+  to-pdf:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: python
+    container_name: to-pdf
     volumes:
       - ./source:/home
     working_dir: /home

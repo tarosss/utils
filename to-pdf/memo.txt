@@ -1,7 +1,7 @@
 docker compose exec -it python python /home/a.py
 
-docker compose run --rm -it python python /home/a.py
-docker compose exec python python /home/to-pdf.py
+docker compose run --rm -it to-pdf python /home/a.py
+docker compose exec to-pdf python /home/to-pdf.py
 
 孤立したコンテナを削除するコマンド
 docker rm -f $(docker ps -a --filter "name=python-python-run" -q)
